@@ -1,7 +1,10 @@
 numpy
 pandas
 Flask
-scikit-learn
+matplotlib
+seaborn
+plotly
 scipy
-sklearn
+scikit-learn
 requests
+urllib3

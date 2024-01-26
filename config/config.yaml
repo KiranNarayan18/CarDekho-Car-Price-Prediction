@@ -1,0 +1,6 @@
+artifacts_root: artifacts
+
+data_ingestion: 
+  root_dir: artifacts/data
+  source_url: https://raw.githubusercontent.com/aravind9722/datasets-for-ML-projects/main/cardekho_dataset.csv
+  

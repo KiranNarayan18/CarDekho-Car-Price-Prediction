@@ -1,3 +1,5 @@
 urllib3
 ensure
 python-box
+types-PyYAML
+pyyaml

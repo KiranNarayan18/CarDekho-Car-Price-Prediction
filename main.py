@@ -1,7 +1,6 @@
-from carprice.data_ingestion.get_training_data import GetData
+from src.pipeline.data_ingestion_pipeline import DataIngestionPipeline
 
 
-
-if __name__ == "__main__":
-    obj = GetData()
-    obj.initiate_download()
+if __name__ == '__main__':
+    obj = DataIngestionPipeline()
+    obj.main()

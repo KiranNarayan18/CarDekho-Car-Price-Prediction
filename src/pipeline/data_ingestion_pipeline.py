@@ -3,7 +3,7 @@ from src.config import ConfigurationManager
 from src.components.data_ingestion import DataIngestion
 
 
-class DataIngestionTrainingPipeline:
+class DataIngestionPipeline:
     def __init__(self):
         pass    
 

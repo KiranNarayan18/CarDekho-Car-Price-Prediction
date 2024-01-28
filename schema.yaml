@@ -1,4 +1,5 @@
-columns:
+
+COLUMNS:
   Selling_Price : float64
   Present_Price: float64
   Kms_Driven: int64
@@ -9,3 +10,4 @@ columns:
 
 TARGET_COLUMN:
   name: Selling_Price
+

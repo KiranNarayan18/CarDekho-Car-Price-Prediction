@@ -1,5 +1,5 @@
 from src.custom_logger import logger
-from src.config import ConfigurationManager
+from src.config.configuration import ConfigurationManager
 from src.components.data_ingestion import DataIngestion
 
 

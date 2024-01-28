@@ -3,7 +3,8 @@ from src.constants import *
 from src.utils.common import read_yaml
 from src.custom_logger import logger
 
-from src.entity import DataIngestionConfig
+from src.entity import (DataIngestionConfig,
+                        DataValidationConfig)
 
 class ConfigurationManager:
 
@@ -29,6 +30,24 @@ class ConfigurationManager:
 
             return data_ingestion_config
 
+
+        except Exception as error:
+            logger.error(f"error while reading configuration: {error}")
+
+
+    def get_data_validation_config(self):
+        try:
+            
+            config = self.config.root_dir
+
+            os.makedirs(config.root_dir, exist_ok=True)
+
+            data_validation_config = DataValidationConfig(
+               root_dir = config.root_dir,
+               clean_dir = config.clean_clean 
+            )
+
+            return data_validation_config
 
         except Exception as error:
             logger.error(f"error while reading configuration: {error}")

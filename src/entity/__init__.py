@@ -6,3 +6,10 @@ from dataclasses import dataclass
 class DataIngestionConfig:
     root_dir: Path
     source_url: str
+
+
+
+@dataclass(frozen=True)
+class DataValidationConfig:
+    root_dir: Path
+    clean_dir: Path

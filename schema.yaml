@@ -11,3 +11,6 @@ COLUMNS:
 TARGET_COLUMN:
   name: Selling_Price
 
+
+COLUMNS_TO_DROP:
+  name: ['Car_Name', 'Year']

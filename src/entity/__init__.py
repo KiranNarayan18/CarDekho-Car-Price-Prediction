@@ -13,3 +13,5 @@ class DataIngestionConfig:
 class DataValidationConfig:
     root_dir: Path
     clean_dir: Path
+    schema: dict
+    target_column: str

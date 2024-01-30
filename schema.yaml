@@ -7,6 +7,7 @@ COLUMNS:
   Seller_Type: object
   Transmission: object
   Owner: int64
+  NoOfYears: int64
 
 TARGET_COLUMN:
   name: Selling_Price

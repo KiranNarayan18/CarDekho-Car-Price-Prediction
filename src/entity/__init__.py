@@ -15,3 +15,4 @@ class DataValidationConfig:
     clean_dir: Path
     schema: dict
     target_column: str
+    columns_to_drop: list

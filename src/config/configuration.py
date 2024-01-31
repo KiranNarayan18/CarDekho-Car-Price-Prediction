@@ -54,7 +54,7 @@ class ConfigurationManager:
                clean_dir = config.clean_dir,
                schema = columns,
                target_column= self.schema_config.TARGET_COLUMN,
-               columns_to_drop=self.schema_config.columns_to_drop
+               columns_to_drop=self.schema_config.COLUMNS_TO_DROP
             )
 
             return data_validation_config

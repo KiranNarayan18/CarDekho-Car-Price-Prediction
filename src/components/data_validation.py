@@ -6,12 +6,10 @@ import os
 from src.custom_logger import logger
 from src.entity import DataValidationConfig
 
-class DataValidation:
+class DataValidator:
     def __init__(self, config: DataValidationConfig):
-        self.config = config
-        print(self.config)
-        self.data_filepath = glob.glob(os.path.join(self.config.root_dir, '*.csv'))[0]
-        print(self.data_filepath)
+        self.config = config        
+        self.data_filepath = glob.glob(os.path.join(self.config.root_dir, '*.csv'))[0]        
 
     def initiate_validation(self):
         try:
@@ -42,7 +40,17 @@ class DataValidation:
             
             os.makedirs(self.config.clean_dir, exist_ok=True)
 
-            df.to_csv(f'{self.config.clean_dir}//cleande_data.csv')
+            df.to_csv(f'{self.config.clean_dir}//cleaned_data.csv')
             
         except Exception as error:
             logger.error(f"error while validating data: {error}")
+
+
+if __name__ == '__main__':
+    from src.config.configuration import ConfigurationManager
+
+    obj = ConfigurationManager()
+    res = obj.get_data_validation_config()
+
+    obj2 = DataValidator(res)
+    obj2.initiate_validation()

@@ -13,6 +13,5 @@ data_validation:
 
 
 data_transformation:
-  data_dir: artifacts/cleaned_data
+  root_dir: artifacts/cleaned_data
   transformed_dir: artifacts/transformed_data
-  

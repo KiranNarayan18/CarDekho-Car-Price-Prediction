@@ -10,3 +10,9 @@ data_validation:
   root_dir: artifacts/data
   clean_dir: artifacts/cleaned_data
   all_schema: dict
+
+
+data_transformation:
+  data_dir: artifacts/cleaned_data
+  transformed_dir: artifacts/transformed_data
+  

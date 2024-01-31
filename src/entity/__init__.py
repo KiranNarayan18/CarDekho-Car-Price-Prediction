@@ -16,3 +16,10 @@ class DataValidationConfig:
     schema: dict
     target_column: str
     columns_to_drop: list
+
+
+@dataclass(frozen=True)
+class DataTransformationConfig:
+    data_dir: Path
+    transformed_dir: Path
+    target_column: str

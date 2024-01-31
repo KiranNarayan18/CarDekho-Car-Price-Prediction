@@ -4,7 +4,8 @@ from src.utils.common import read_yaml
 from src.custom_logger import logger
 
 from src.entity import (DataIngestionConfig,
-                        DataValidationConfig)
+                        DataValidationConfig,
+                        DataTransformationConfig)
 
 class ConfigurationManager:
 
@@ -61,3 +62,23 @@ class ConfigurationManager:
 
         except Exception as error:
             logger.error(f"error while reading configuration: {error}")
+
+
+    
+
+    def get_data_transformation_config(self):
+        try:
+            config = self.config.data_transformation
+
+            os.makedirs(config.transformed_dir, exist_ok=True)
+
+            data_transformation_config = DataTransformationConfig(
+                root_dir = config.root_dir,
+                transformed_dir=config.transformed_dir,
+                target_column= self.schema_config.TARGET_COLUMN,
+            )
+
+            return data_transformation_config
+
+        except Exception as error:
+            logger.error(f"error while getting data transformation: {error}")

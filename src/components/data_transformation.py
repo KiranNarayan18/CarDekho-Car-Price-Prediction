@@ -1,3 +1,10 @@
+"""
+Author: Kiran Narayan
+version: v1.0
+Data: 01-02-2024
+"""
+
+
 import os
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -28,3 +35,14 @@ class DataTransfomer:
 
         except Exception as error:
             logger.error(f"error in data transformation: {error}")
+
+
+if __name__ == '__main__':
+
+    from src.config.configuration import ConfigurationManager
+
+    obj1 = ConfigurationManager()
+    obj1 = obj1.get_data_transformation_config()
+
+    obj = DataTransfomer(obj1)
+    obj.initiate_transfomation()

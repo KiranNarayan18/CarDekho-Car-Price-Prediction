@@ -1,10 +1,16 @@
+"""
+Author: Kiran Narayan
+version: v1.0
+Data: 01-02-2024
+"""
+
 
 from src.custom_logger import logger
 from src.config.configuration import ConfigurationManager
 from src.components.data_transformation import DataTransfomer
+ 
 
-
-class DataTransfomerPipeline:
+class DataTransformationPipeline:
     def __init__(self):
         pass
 
@@ -22,5 +28,5 @@ class DataTransfomerPipeline:
 
 
 if __name__ == "__main__":
-    obj = DataTransfomerPipeline()
+    obj = DataTransformationPipeline()
     obj.main()

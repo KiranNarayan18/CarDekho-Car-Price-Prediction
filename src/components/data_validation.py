@@ -1,3 +1,9 @@
+"""
+Author: Kiran Narayan
+version: v1.0
+Data: 01-02-2024
+"""
+
 ## components
 import glob
 import pandas as pd

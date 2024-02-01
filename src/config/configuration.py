@@ -1,3 +1,9 @@
+"""
+Author: Kiran Narayan
+version: v1.0
+Data: 01-02-2024
+"""
+
 import os
 from src.constants import *
 from src.utils.common import read_yaml

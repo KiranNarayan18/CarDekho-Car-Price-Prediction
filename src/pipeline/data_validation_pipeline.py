@@ -1,3 +1,9 @@
+"""
+Author: Kiran Narayan
+version: v1.0
+Data: 01-02-2024
+"""
+
 
 from src.custom_logger import logger
 from src.config.configuration import ConfigurationManager

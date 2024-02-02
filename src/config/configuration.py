@@ -11,7 +11,8 @@ from src.custom_logger import logger
 
 from src.entity import (DataIngestionConfig,
                         DataValidationConfig,
-                        DataTransformationConfig)
+                        DataTransformationConfig,
+                        ModelTrainingConfig)
 
 class ConfigurationManager:
 
@@ -88,3 +89,24 @@ class ConfigurationManager:
 
         except Exception as error:
             logger.error(f"error while getting data transformation: {error}")
+
+
+    
+    def get_model_training_config(self):
+        try:
+            
+            config = self.config.model_training
+
+            os.makedirs(config.model_dir, exist_ok=True)
+            
+            data_ingestion_config = ModelTrainingConfig(
+                root_dir = config.root_dir,
+                model_dir = config.model_dir,
+                target_column = self.schema_config.TARGET_COLUMN.name,
+            )
+
+            return data_ingestion_config
+
+
+        except Exception as error:
+            logger.error(f"error while reading configuration: {error}")

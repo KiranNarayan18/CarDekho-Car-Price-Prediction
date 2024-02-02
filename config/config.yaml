@@ -15,3 +15,9 @@ data_validation:
 data_transformation:
   root_dir: artifacts/cleaned_data
   transformed_dir: artifacts/transformed_data
+
+
+model_training:
+  root_dir: artifacts/transformed_data
+  model_dir: artifacts/models
+

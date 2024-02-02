@@ -16,9 +16,7 @@ from src.custom_logger import logger
 class DataTransfomer:
     def __init__(self, config:DataTransformationConfig):
         self.config = config
-        print(self.config)
-
-
+        
     def initiate_transfomation(self):
         
         try:

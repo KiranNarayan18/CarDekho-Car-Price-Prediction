@@ -27,8 +27,8 @@ class DataTransfomer:
 
             train_df, test_df = train_test_split(df, test_size=0.3, random_state=0)
 
-            train_df.to_csv(os.path.join(self.config.transformed_dir, 'train.csv'))
-            test_df.to_csv(os.path.join(self.config.transformed_dir, 'test.csv'))
+            train_df.to_csv(os.path.join(self.config.transformed_dir, 'train.csv'), index=False)
+            test_df.to_csv(os.path.join(self.config.transformed_dir, 'test.csv'), index=False)
             
 
         except Exception as error:

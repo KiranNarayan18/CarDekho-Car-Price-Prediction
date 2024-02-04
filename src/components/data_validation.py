@@ -46,7 +46,7 @@ class DataValidator:
             
             os.makedirs(self.config.clean_dir, exist_ok=True)
 
-            df.to_csv(f'{self.config.clean_dir}//cleaned_data.csv', index=False)
+            df.to_csv(f'{self.config.clean_dir}//cleaned_data.csv')
             
         except Exception as error:
             logger.error(f"error while validating data: {error}")

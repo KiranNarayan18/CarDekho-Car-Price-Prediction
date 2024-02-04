@@ -3,3 +3,7 @@ ensure
 python-box
 types-PyYAML
 pyyaml
+pandas
+numpy
+scikit-learn
+seaborn

@@ -4,11 +4,7 @@ version: v1.0
 Data: 01-02-2024
 """
 
-
-
-
 from src.custom_logger import logger
-
 
 from src.pipeline.data_ingestion_pipeline import DataIngestionPipeline
 from src.pipeline.data_validation_pipeline import DataValidationPipeline

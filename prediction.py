@@ -13,7 +13,7 @@ class PredictionPipeline:
     
     def predict_output(self, data):
 
-        # try:
+        try:
 
             data["NoOfYears"] = 2024 - data['Year']
 
@@ -47,8 +47,8 @@ class PredictionPipeline:
 
             return round(prediction[0], 2)
         
-        # except Exception as error:
-        #     logger.error(f"error in prediction pipeline: {error}")
+        except Exception as error:
+            logger.error(f"error in prediction pipeline: {error}")
 
 
 

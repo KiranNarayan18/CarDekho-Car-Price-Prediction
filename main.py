@@ -16,6 +16,8 @@ from src.pipeline.data_transformation_pipeline import DataTransformationPipeline
 from src.pipeline.model_training_pipeline import ModelTrainingPipeline
 
 
+
+
 if __name__ == '__main__':
 
     STAGE_NAME = 'DATA_INGESTION'        

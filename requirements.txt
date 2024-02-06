@@ -4,3 +4,7 @@ python-box
 types-PyYAML
 pyyaml
 Flask
+joblib
+numpy 
+pandas 
+scikit-learn
